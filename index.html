@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolojik Kredi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sol Taraf -->
+        <div class="left">
+            <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+            <img src="logo.png" alt="Ekolojik Kredi Logo" class="logo">
+            <h1>Ekolojik Kredi</h1>
+            <div class="menu-content">
+                <a href="#" onclick="showSection('ekolojik-kredi-nedir')">Ekolojik Kredi Nedir?</a>
+                <a href="#" onclick="showSection('proje-ozeti')">Proje Özeti</a>
+                <a href="#" onclick="showSection('hazirlayanlar')">Hazırlayanlar</a>
+            </div>
+        </div>
+
+        <!-- Sağ Taraf -->
+        <div class="right">
+            <button onclick="showSection('kayit-ol')">Kayıt Ol</button>
+            <button onclick="showSection('bilgilendirme')">Bilgilendirme</button>
+            <button onclick="showSection('veri-girisi')">Veri Girişi</button>
+        </div>
+    </div>
+
+    <!-- Kayıt Ol Sayfası -->
+    <div id="kayit-ol" class="section hidden">
+        <h2>Kayıt Ol</h2>
+        <form>
+            <input type="text" placeholder="İsim Soyisim" required>
+            <input type="email" placeholder="E-posta" required>
+            <input type="text" placeholder="Okul" required>
+            <input type="text" placeholder="İl" required>
+            <input type="text" placeholder="İlçe" required>
+            <input type="number" placeholder="Okul Numarası" required>
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
+
+    <!-- Bilgilendirme Sayfası -->
+    <div id="bilgilendirme" class="section hidden">
+        <h2>Bilgilendirme</h2>
+        <form>
+            <input type="email" placeholder="E-posta" required>
+            <input type="password" placeholder="Şifre" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+    </div>
+
+    <!-- Veri Girişi Sayfası -->
+    <div id="veri-girisi" class="section hidden">
+        <h2>Veri Girişi</h2>
+        <form>
+            <input type="text" placeholder="Okul" required>
+            <input type="number" placeholder="Okul Numarası" required>
+            <input type="text" placeholder="Atık Türü" required>
+            <input type="number" placeholder="Atık Miktarı (kg)" required>
+            <button type="submit">Veri Gir</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
